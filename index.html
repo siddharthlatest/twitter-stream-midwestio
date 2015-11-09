@@ -11,6 +11,7 @@
 
     // Fetch 10 initial results and display
     appbase.search({
+    	size: 25,  // show 25 posts initially (default is 10)
         type: "onlymidwestio",
 	body: {query: {match_all: {}}}
     }).on('data', function(res) {
