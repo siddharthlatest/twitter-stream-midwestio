@@ -1,0 +1,33 @@
+{
+  "name": "twitter-stream-midwestio",
+  "version": "0.0.1",
+  "description": "Stream twitter feeds into appbase.io for realtime crunching",
+  "main": "index.js",
+  "dependencies": {
+    "twitter": "^1.2.5",
+    "appbase-js": "^0.9.0"
+    "fs": "^0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/siddharthlatest/twitter-stream-midwestio.git"
+  },
+  "keywords": [
+    "twitter",
+    "appbase",
+    "datastreams",
+    "streams",
+    "realtime",
+    "database"
+  ],
+  "author": "Siddharth Kothari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siddharthlatest/twitter-stream-midwestio/issues"
+  },
+  "homepage": "https://github.com/siddharthlatest/twitter-stream-midwestio#readme"
+}
