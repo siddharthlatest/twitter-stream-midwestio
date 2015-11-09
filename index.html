@@ -1,0 +1,34 @@
+<script src="bower_components/appbase-js/browser/appbase.js"></script>
+<div id="tweetshero" style="font-size: 1em">
+</div>
+<script type="text/javascript">
+    var appbase = new Appbase({
+        url: "https://scalr.api.appbase.io",
+        appname: "twitter-stream-midwestio",
+        username: "w1ZN2TUa3",
+        password: "8ab9fee1-d63f-44ef-8a0f-c70f717a898a"
+    });
+
+
+    appbase.search({
+        type: "onlymidwestio",
+	body: {query: {match_all: {}}}
+    }).on('data', function(res) {
+        var data = res.hits.hits;
+        console.log(data);
+        for (i in data) {
+            var div = document.getElementById('tweetshero');
+            div.innerHTML = div.innerHTML + data[i]._source.text + "<br><br>";
+        }
+    });
+
+    var response = appbase.searchStream({
+        type: "onlymidwestio",
+	body: {query: {match_all: {}}}
+    });
+
+    response.on('data', function(res) {
+        var div = document.getElementById('tweetshero');
+        div.innerHTML = div.innerHTML + res._source.text + "<br><br>";
+    });
+</script>
