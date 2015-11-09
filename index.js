@@ -19,7 +19,7 @@ var appbaseRef = new Appbase({
              })
 
 //Filter tweets related to midwestio
-var stream = client.stream('statuses/filter', { track: 'midwestio,midwest,mariott,kansascity,KC', language: 'en' }, function(stream) {
+client.stream('statuses/filter', { track: 'midwestio,midwest,mariott,kansascity,KC', language: 'en' }, function(stream) {
 	stream.on('data', function(tweet) {
 		console.log(tweet.text);
 		appbaseRef.index({
@@ -30,4 +30,13 @@ var stream = client.stream('statuses/filter', { track: 'midwestio,midwest,mariot
 });
 
 
+client.stream('statuses/filter', { track: 'midwestio', language: 'en' }, function(stream) {
+	stream.on('data', function(tweet) {
+		console.log(tweet.text);
+		appbaseRef.index({
+		    "type": "onlymidwestio",
+		    "body": tweet
+		})
+	});
+});
 
