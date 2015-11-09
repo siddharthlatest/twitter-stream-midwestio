@@ -18,7 +18,7 @@
         console.log(data);
         for (i in data) {
             var div = document.getElementById('tweetshero');
-            div.innerHTML = div.innerHTML + data[i]._source.text + "<br><br>";
+            div.innerHTML = data[i]._source.text + "<br><br>" + div.innerHTML;
         }
     });
 
@@ -29,6 +29,6 @@
 
     response.on('data', function(res) {
         var div = document.getElementById('tweetshero');
-        div.innerHTML = div.innerHTML + res._source.text + "<br><br>";
+        div.innerHTML = res._source.text + "<br><br>" + div.innerHTML;
     });
 </script>
