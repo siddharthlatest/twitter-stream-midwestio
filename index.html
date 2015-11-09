@@ -9,7 +9,7 @@
         password: "8ab9fee1-d63f-44ef-8a0f-c70f717a898a"
     });
 
-
+    // Fetch 10 initial results and display
     appbase.search({
         type: "onlymidwestio",
 	body: {query: {match_all: {}}}
@@ -22,6 +22,7 @@
         }
     });
 
+    // Subscribe to new results
     var response = appbase.searchStream({
         type: "onlymidwestio",
 	body: {query: {match_all: {}}}
