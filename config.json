@@ -1,0 +1,13 @@
+{
+  "twitter": {
+    "consumer_key": "DwoCxgp4O6sHvrt17NCXlpb8t",
+    "consumer_api": "1fMDjaHqyGVRlXL8DpEmkOdwZzWybAVgtJFWNOShrvD3sa3A1B",
+    "access_token": "2311820418-ZlOULNESebWTSGdEOx3wHqKL71nVWjJydS5sZMk",
+    "access_token_secret": "W1pFoh7H4srGFc8YEhZN3EUW15czeGpgB9kvNJoplwNzg"
+  },
+  "appbase": {
+    "appname": "twitter-stream-midwestio",
+    "username": "w1ZN2TUa3",
+    "password": "8ab9fee1-d63f-44ef-8a0f-c70f717a898a"
+  }
+}
